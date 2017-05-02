@@ -1,0 +1,31 @@
+.main-box{
+    position:fixed;
+    top:0;bottom:0;
+    left:0;right:0;
+}
+
+.main-box .form-box{
+    position:absolute;
+    top:30%;
+    left:50%;
+    transform: translate(-50%);
+    color:#555;
+}
+
+
+.main-box .form-box input{
+    height:40px;
+    margin-top:3px;
+    margin-bottom:5px;
+    border:1px solid #ccc;
+}
+.main-box .form-box img{
+    width:100px;
+}
+.main-box .form-box input:focus{
+    outline: none;
+}
+
+.main-box .form-box button:focus{
+    outline: none;
+}
