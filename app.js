@@ -3,15 +3,15 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var log4js = require("log4js");
-log4js.configure({
-    appenders: [{
-        type: 'console'
-    }, {
-        type: 'file',
-        filename: 'cheese.log',
-        category: 'cheese'
-    }]
-});
+// log4js.configure({
+//     appenders: [{
+//         type: 'console'
+//     }, {
+//         type: 'file',
+//         filename: 'cheese.log',
+//         category: 'cheese'
+//     }]
+// });
 
 var app = express();
 app.use(session({
@@ -23,9 +23,9 @@ app.use(session({
         maxAge: 1000 * 60 * 60 * 24 * 5 // 毫秒级
     }
 }));
-app.use(log4js.connectLogger(log4js.getLogger("cheese"), {
-    level: log4js.levels.INFO
-}));
+// app.use(log4js.connectLogger(log4js.getLogger("cheese"), {
+//     level: log4js.levels.INFO
+// }));
 
 app.use(express.static('public'));
 app.use(cookieParser());

@@ -12,11 +12,9 @@ module.exports = function(req,res){
     userDb(reqData).then(function(data){
         console.log('查询结果',data,"length:",data.length);
         if(data.length == 0){
-            res.send(message.success_msg('账户可用',{}));
-        }else if(data.length > 1){
-            res.send(message.error_msg(10001,'数据库错误 错误代号'));
-        }else if(data.length == 0){
-            res.send(message.error_msg(20000,'用户未注册'));
+            res.send(message.success_msg('账户未注册',{}));
+        }else if(data.length >= 1){
+            res.send(message.error_msg(10001,'账户已注册'));
         }
         res.end();
     },function(err){
