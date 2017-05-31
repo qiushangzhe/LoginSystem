@@ -43,3 +43,4 @@ app.all('*', function(req, res, next) {
 
 require('./logic/app.router.js')(app);
 app.listen(12345);
+console.log('http://127.0.0.1:12345');

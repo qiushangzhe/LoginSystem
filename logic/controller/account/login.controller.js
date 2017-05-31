@@ -22,6 +22,7 @@ module.exports = function(req,res){
 }
 
 function checkAccount(reqData,dbData,req,res){
+  console.log(reqData.password,dbData.password)
     //比对密码
     if(reqData.password == dbData.password){
         res.send(message.success_msg('登录成功',{}));
