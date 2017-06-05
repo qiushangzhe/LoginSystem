@@ -8,3 +8,5 @@ mongoose + express
     - /user/checkCaptcha 检查验证码
     - /user/login 登录
     - /user/checkUsername 检查用户名是否可用
+
+- 后续考虑增加session记录用户登录态，实现固定时间内不需要重复登录。
