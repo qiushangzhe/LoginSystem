@@ -10,6 +10,7 @@ exports.getCaptcha = function(req, res) {
     var buf = ary[1]; //图片
     console.log("验证码生成：",text);
     req.session.captcha = text;
+    console.log("session设置",req.session.captcha);
     res.set('Content-Type', 'image/jpeg');
     res.send(buf);
     res.end();

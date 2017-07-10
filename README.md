@@ -10,3 +10,4 @@ mongoose + express
     - /user/checkUsername 检查用户名是否可用
 
 - 后续考虑增加session记录用户登录态，实现固定时间内不需要重复登录。
+s%3AKvDZMNb4RPPa8POAdKV8JsCr8P7pYsOu.0GS7z2RqUfMXokxLbVCad9myqjAeJX6MoxNP63lG0gI

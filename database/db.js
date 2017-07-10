@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var dbPath = "mongodb://127.0.0.1/user_database";
+mongoose.Promise = global.Promise;
 var options = {};
 options = {
     server: {
