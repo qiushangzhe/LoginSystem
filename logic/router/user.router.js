@@ -10,7 +10,7 @@ module.exports = function (app) {
     //检查验证码
     router.post('/checkCaptcha', require('../controller/account/captcha.controller.js').checkCaptcha);
     //检查是否登陆
-    router.post('/islogin',require('../controller/account/islogin.controller.js'));
+    router.post('/islogin',require('../controller/account/islogin.controller.js').isLogin);
     //登录
     router.post('/login',require('../controller/account/login.controller.js'));
     //查看用户名是否重复
