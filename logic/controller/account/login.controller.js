@@ -7,7 +7,7 @@ require('colors');
 module.exports = function(req,res,next){
     var reqData = req.body;
     // console.log('服务器收到消息:',reqData);
-    console.log(("session信息为"+JSON.stringify(req.session)).green);
+    // console.log(("session信息为"+JSON.stringify(req.session)).green);
     if(req.session.login_user != null){
         res.send('已登陆'+req.session.login_user);
         res.end();
@@ -35,7 +35,7 @@ module.exports = function(req,res,next){
 }
 
 function checkAccount(reqData,dbData,req,res,next){
-  console.log(reqData.password,dbData.password)
+  // console.log(reqData.password,dbData.password)
     //比对密码
     if(reqData.password == dbData.password){
         res.send(message.success_msg('登录成功',{}));

@@ -10,7 +10,7 @@ module.exports = function(req,res){
         res.send(message.error_msg(20000,'username字段为空'));
     }
     userDb(reqData).then(function(data){
-        console.log('查询结果',data,"length:",data.length);
+        // console.log('查询结果',data,"length:",data.length);
         if(data.length == 0){
             res.send(message.success_msg('账户未注册',{}));
         }else if(data.length >= 1){
